@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'VedicKare',
-         themeMode: ThemeMode.light,
-      theme: MyTheme.lightTheme(context),
-        initialRoute: 'doctorHomePage',
+        themeMode: ThemeMode.light,
+        theme: MyTheme.lightTheme(context),
+        initialRoute: 'loginPage',
         routes: {
           'loginPage': (context) => const LoginPage(),
           'registerPage': (context) => const RegisterPage(),

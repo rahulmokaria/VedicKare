@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:vedic_kare/pages/doctor_home_page.dart';
-import 'package:vedic_kare/pages/forgot_password_page.dart';
-import 'package:vedic_kare/pages/login_page.dart';
-import 'package:vedic_kare/pages/patient_home_page.dart';
-import 'package:vedic_kare/pages/register_page.dart';
+
+import 'pages/doctor_home_page.dart';
+import 'pages/forgot_password_page.dart';
+import 'pages/login_page.dart';
+import 'pages/patient_home_page.dart';
+import 'pages/register_page.dart';
+import 'theme/my_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,10 +19,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'VedicKare',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        initialRoute: 'homePage',
+         themeMode: ThemeMode.light,
+      theme: MyTheme.lightTheme(context),
+        initialRoute: 'doctorHomePage',
         routes: {
           'loginPage': (context) => const LoginPage(),
           'registerPage': (context) => const RegisterPage(),
